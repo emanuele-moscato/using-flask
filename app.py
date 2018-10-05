@@ -46,11 +46,12 @@ def greet_user(username):
 @app.route('/greet-person/', methods=['GET', 'POST'])
 def greet_person():
     if request.method == 'GET':
-        pass
+        response_body = {'response': 'Send a POST request'}
+        return make_response(jsonify(response_body), 200)
     elif request.method == 'POST':
         r = request.json
         response_body = {'response': "Hi, "+r['person']}
-        return jsonify(response_body)
+        return make_response(jsonify(response_body), 200)
     else:
         pass
 
