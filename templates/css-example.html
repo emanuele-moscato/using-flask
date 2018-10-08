@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS example</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/styles/css-example.css">
+</head>
+
+<body>
+  <div class="column_section">
+    <h1>How to use cascading style sheets (CSS)</h1>
+  </div>
+
+  <div class="column_section">
+    <p>
+      Flask automatically looks for (and serves) files from the <q>static/</q>
+      directory, which has to be put at the same level as the app file.
+      Subdirectories are then possible and can be specified in the path in the
+      <code>link</code> object in the head of the html files that uses the
+      stylesheet.
+    </p>
+
+    <h2>Browser caching</h2>
+    <p>
+      When we update the CSS stylesheet used by a page, this may not be
+      reflected in what we see in the browser. The reason is called <q>browser
+      caching</q>: the browser keeps the information about the old version of
+      the CSS file in memory and doesn't realise when changes happen. There are
+      two workarounds,
+    </p>
+    <ul>
+      <li>
+        Set up headers that tell the browser not to cache information from
+        this website (see a guide
+        <a href="http://cristian.sulea.net/blog/disable-browser-caching-with-meta-html-tags/">
+        here</a>). This can be fairly complicated in the context of a Flask
+        app.
+      </li>
+      <li>
+        Manually deleting the browser's cache after updating the CSS file. For
+        Chrome users, a giude can be found <a href="https://productforums.google.com/forum/#!topic/chrome/YEE24sDJxfo">
+        here</a>. For testing purposes, this is sufficient.
+      </li>
+    </ul>
+
+    <h2 id="asi-color-h2">Custom elements</h2>
+    <p>
+      We can define style attributes in a CSS file for an element with a
+      specific id. Since ids should be unique (no two elements should have the
+      same id) this means that we are specifying style options for that element
+      alone.
+    </p>
+  </div>
+</body>
+
+</html>

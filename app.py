@@ -98,6 +98,21 @@ def render_index():
     return render_template('index.html')
 
 
+@app.route('/ulisse-page/')
+def render_ulisse():
+    return render_template('ulisse-page.html')
+
+
+@app.route('/css-example/')
+def render_css_example():
+    return render_template('css-example.html')
+
+
+@app.route('/javascript-example/')
+def render_javascrip_example():
+    return render_template('javascript-example.html')
+
+
 if __name__ == '__main__':
     try:
         app.run(port=PORT, debug=True)

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript example</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <h1 id="title">Using JavaScript</h1>
+  <p id="intro">Click on the button below.</p>
+  <button id="mentor-button" type="button" onclick="displayClicked()">
+    This!
+  </button>
+  <p id="to-be-filled"></p>
+
+  <button id="paint-blue" type="button" onclick=paintItBlue()>Paint it blue</button>
+  <button id="paint-black" type="button" onclick=paintItBlack()>Paint it black</button>
+  <br>
+  <br>
+  <button id="reset-button" type="button" onclick="reset()">Reset</button>
+  <button id="disappear-button" type="button" onclick="makeItDisappear()">
+    Make it disappear
+  </button>
+
+  <script>
+    function displayClicked() {
+      document.getElementById("to-be-filled").innerHTML = "DISCOVER";
+      document.getElementById("intro").innerHTML =
+        "Threw two dice made of bones..."
+    }
+    function paintItBlue() {
+      document.getElementById("title").style.color = "#00aef9"
+    }
+    function paintItBlack() {
+      document.getElementById("title").style.color = "black"
+    }
+    function reset() {
+      document.getElementById("title").style.color = "black"
+      document.getElementById("to-be-filled").innerHTML = ""
+      document.getElementById("intro").innerHTML = "Click on the button below."
+    }
+    function makeItDisappear() {
+      document.getElementById("title").style.display = "none"
+      document.getElementById("intro").style.display = "none"
+      document.getElementById("mentor-button").style.display = "none"
+      document.getElementById("paint-blue").style.display = "none"
+      document.getElementById("paint-black").style.display = "none"
+      document.getElementById("paint-black").style.display = "none"
+      document.getElementById("reset-button").style.display = "none"
+      document.getElementById("disappear-button").style.display = "none"
+    }
+  </script>
+
+</body>
+</html>
