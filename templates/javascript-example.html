@@ -8,14 +8,23 @@
 </head>
 <body>
   <h1 id="title">Using JavaScript</h1>
+  <p>
+    JavaScript is the language used to add script to web pages. It allows to
+    add interactivity between the users and elements of the page rendered by
+    the browser.
+  </p>
   <p id="intro">Click on the button below.</p>
   <button id="mentor-button" type="button" onclick="displayClicked()">
     This!
   </button>
   <p id="to-be-filled"></p>
 
-  <button id="paint-blue" type="button" onclick=paintItBlue()>Paint it blue</button>
-  <button id="paint-black" type="button" onclick=paintItBlack()>Paint it black</button>
+  <button id="paint-blue" type="button" onclick=paintItBlue()>
+    Paint it blue
+  </button>
+  <button id="paint-black" type="button" onclick=paintItBlack()>
+    Paint it black
+  </button>
   <br>
   <br>
   <button id="reset-button" type="button" onclick="reset()">Reset</button>
@@ -23,7 +32,14 @@
     Make it disappear
   </button>
 
+  <p id="hideable-paragraph">More hideable content!</p>
+  <button id="hide-par" type="button" onclick="hidePar()">Hide</button>
+  <button id="show-par" type="button" onclick="showPar()">Show</button>
+
+  <!-- Embedded scripts -->
   <script>
+    window.alert("Welcome to the JavaScript examples. Humans.")
+
     function displayClicked() {
       document.getElementById("to-be-filled").innerHTML = "DISCOVER";
       document.getElementById("intro").innerHTML =
@@ -51,6 +67,9 @@
       document.getElementById("disappear-button").style.display = "none"
     }
   </script>
+
+  <!-- Script loaded from an external file -->
+  <script src="../static/scripts/javascript-example.js"></script>
 
 </body>
 </html>
