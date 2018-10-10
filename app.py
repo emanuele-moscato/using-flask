@@ -113,6 +113,11 @@ def render_javascrip_example():
     return render_template('javascript-example.html')
 
 
+@app.route('/more-javascript/')
+def render_more_javascript():
+    return render_template('more-javascript.html')
+
+
 if __name__ == '__main__':
     try:
         app.run(port=PORT, debug=True)
